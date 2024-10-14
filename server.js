@@ -2,8 +2,10 @@ const WebSocket = require('ws');
 const jwt = require('jsonwebtoken');
 const express = require('express');
 require('dotenv').config({ path: '../../projekt1_node/node_app/.env' });
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 const port = 443; // Change this to any port that is not currently in use
 
