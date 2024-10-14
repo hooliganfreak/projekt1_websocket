@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-const port = 443; // Change this to any port that is not currently in use
+const port = 8080; // Change this to any port that is not currently in use
 
 console.log(`Attempting to start server on port: ${port}`);
 
@@ -146,6 +146,10 @@ wss.on('connection', (ws, req) => {
             updateGlobalUserList();
         });
     });
+});
+
+ws.on('error', (error) => {
+    console.error('WebSocket error:', error);
 });
 
 // Funktioner som skickar meddelanden till alla connected användare om ändringar som hänt
