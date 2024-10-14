@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const jwt = require('jsonwebtoken');
 const express = require('express');
-require('dotenv').config({ path: '../node_app/.env' });
+require('dotenv').config({ path: '../../projekt1_node/node_app/.env' });
 
 const app = express();
 const server = app.listen(3001, () => {
