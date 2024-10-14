@@ -4,8 +4,12 @@ const express = require('express');
 require('dotenv').config({ path: '../../projekt1_node/node_app/.env' });
 const cors = require('cors');
 
+const corsOptions = {
+    origin: 'https://projekt-v1-g2exhfaxgpfaa6ht.northeurope-01.azurewebsites.net'
+}
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 
 const port = 8080; // Change this to any port that is not currently in use
 
