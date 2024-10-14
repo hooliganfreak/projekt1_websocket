@@ -3,11 +3,16 @@ const jwt = require('jsonwebtoken');
 const express = require('express');
 require('dotenv').config({ path: '../../projekt1_node/node_app/.env' });
 
-const port = process.env.PORT || 8080;
 const app = express();
-console.log("port = ", port);
-const server = app.listen(port, () => { // Use process.env.PORT
+
+const port = 443; // Change this to any port that is not currently in use
+
+console.log(`Attempting to start server on port: ${port}`);
+
+const server = app.listen(port, () => {
     console.log(`Server running on port ${port}`);
+}).on('error', (err) => {
+    console.error('Error starting server:', err);
 });
 
 // WebSocket Server
