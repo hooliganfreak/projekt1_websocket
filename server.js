@@ -6,6 +6,7 @@ require('dotenv').config({ path: '../../projekt1_node/node_app/.env' });
 const app = express();
 const server = app.listen(443, () => {
     console.log(`Server running on port 443`);
+    console.log(window.location.hostname);
 });
 
 // WebSocket Server
