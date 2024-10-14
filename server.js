@@ -148,10 +148,6 @@ wss.on('connection', (ws, req) => {
     });
 });
 
-ws.on('error', (error) => {
-    console.error('WebSocket error:', error);
-});
-
 // Funktioner som skickar meddelanden till alla connected användare om ändringar som hänt
 function updateStickyTitle(noteId, title, boardId, exludeUser) {
     const message = {
