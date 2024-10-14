@@ -5,6 +5,7 @@ require('dotenv').config({ path: '../../projekt1_node/node_app/.env' });
 
 const port = process.env.PORT || 8080;
 const app = express();
+console.log("port = ", port);
 const server = app.listen(port, () => { // Use process.env.PORT
     console.log(`Server running on port ${port}`);
 });
